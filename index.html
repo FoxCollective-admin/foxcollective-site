@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Fox Collective | Shoes for men, women and kids</title>
+<meta name="description" content="The Fox Collective. Shoes for men, women and kids from the brands you know, shipped from Chicago. Shop live on Whatnot.">
+<link rel="canonical" href="https://foxcollective.org/">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Fox Collective">
+<meta property="og:title" content="The Fox Collective | Shoes for men, women and kids">
+<meta property="og:description" content="Shoes from the brands you know, shipped from Chicago. Shop live on Whatnot.">
+<meta property="og:url" content="https://foxcollective.org/">
+<meta property="og:image" content="https://foxcollective.org/img/og-home.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Fox Collective. Shoes for men, women and kids. Ships from Chicago.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Fox Collective | Shoes for men, women and kids">
+<meta name="twitter:description" content="Shoes from the brands you know, shipped from Chicago. Shop live on Whatnot.">
+<meta name="twitter:image" content="https://foxcollective.org/img/og-home.png">
+<meta name="twitter:image:alt" content="The Fox Collective. Shoes for men, women and kids. Ships from Chicago.">
+<link rel="stylesheet" href="site.css">
+<script src="site.js"></script>
+</head>
+<body class="sf" data-page="home">
+<a class="skip" href="#main">Skip to content</a>
+
+<header>
+  <div class="hdr" id="hdr">
+    <a class="brand" href="index.html" aria-label="The Fox Collective, home">THE FOX <span>COLLECTIVE</span></a>
+    <form class="search" id="search-form" role="search" data-needs-products hidden>
+      <label class="vh" for="q">Search shoes and brands</label>
+      <input id="q" type="search" name="q" placeholder="Search shoes and brands" autocomplete="off">
+    </form>
+    <div class="right"><a href="https://www.whatnot.com/user/thefoxcollective" rel="noopener">Watch live</a><a href="careers.html"><b>Careers</b></a></div>
+  </div>
+  <nav class="catnav" aria-label="Shop" data-needs-products hidden>
+    <button type="button" data-go="pill:new">New Arrivals</button>
+    <button type="button" data-go="gender:men">Men</button>
+    <button type="button" data-go="gender:women">Women</button>
+    <button type="button" data-go="gender:kids">Kids</button>
+    <a href="#brands">Brands</a>
+    <button type="button" class="hot" data-go="pill:sale">Sale</button>
+  </nav>
+</header>
+<div class="strip">
+  <span>Ships from Chicago</span>
+  <span class="keep-m">Live shows daily on Whatnot <a href="https://www.whatnot.com/user/thefoxcollective" rel="noopener">Watch</a></span>
+</div>
+
+<main id="main">
+<div class="banner">
+  <div class="txt">
+    <p class="kicker">New this week</p>
+    <h1>Just landed.</h1>
+    <p class="sub">New pairs from the brands you know, added every week.</p>
+    <div class="minis" data-needs-products hidden>
+      <button type="button" class="mini" data-go="gender:men">Shop Men's</button>
+      <button type="button" class="mini" data-go="gender:women">Shop Women's</button>
+      <button type="button" class="mini" data-go="gender:kids">Shop Kids'</button>
+    </div>
+    <div class="minis" data-no-products>
+      <a class="mini" href="https://www.whatnot.com/user/thefoxcollective" rel="noopener">Shop live on Whatnot</a>
+    </div>
+  </div>
+  <!-- Hero photo slot. To use a real photo: replace this div with
+       <img class="ph-img" src="img/hero.jpg" alt="(describe the pair in the photo)"> -->
+  <div class="ph needs-photo">Full-width hero photo<br>(one great shot of a pair, like the big retailers use)</div>
+</div>
+
+<div class="wrap" data-needs-products hidden>
+  <div class="pills" role="group" aria-label="Quick filters">
+    <button type="button" data-pill="new" aria-pressed="false">New Arrivals</button>
+    <button type="button" data-pill="under50" aria-pressed="false">Under $50</button>
+    <button type="button" data-pill="running" aria-pressed="false">Running</button>
+    <button type="button" data-pill="lifestyle" aria-pressed="false">Lifestyle</button>
+    <button type="button" data-pill="kids" aria-pressed="false">Kids' sizes</button>
+    <button type="button" data-pill="sale" aria-pressed="false">Sale</button>
+  </div>
+</div>
+
+<section id="new" aria-labelledby="results-title" data-needs-products hidden>
+  <div class="wrap">
+    <div class="shophead">
+      <h2 id="results-title" tabindex="-1">New Arrivals</h2>
+      <p class="count" id="results-count" role="status" aria-live="polite"></p>
+    </div>
+    <div class="tabs" role="group" aria-label="Show shoes for">
+      <button type="button" data-tab="all" aria-pressed="true">All</button>
+      <button type="button" data-tab="men" aria-pressed="false">Men's</button>
+      <button type="button" data-tab="women" aria-pressed="false">Women's</button>
+      <button type="button" data-tab="kids" aria-pressed="false">Kids'</button>
+    </div>
+    <ul class="rail scroll" id="rail-new"></ul>
+    <p class="empty" id="results-empty" hidden>No pairs match right now.<button type="button" id="results-reset">Show everything</button></p>
+  </div>
+</section>
+
+<section id="shop" aria-labelledby="cat-title" data-needs-products hidden>
+  <div class="wrap">
+    <h2 id="cat-title">Shop by Category</h2>
+    <ul class="tiles" id="cat-tiles">
+      <li><button type="button" class="tile" data-go="gender:men" data-tile="Men's"><span class="img" aria-hidden="true"></span><span class="lb">Men's Shoes</span></button></li>
+      <li><button type="button" class="tile" data-go="gender:women" data-tile="Women's"><span class="img" aria-hidden="true"></span><span class="lb">Women's Shoes</span></button></li>
+      <li><button type="button" class="tile" data-go="gender:kids" data-tile="Kids'"><span class="img" aria-hidden="true"></span><span class="lb">Kids' Shoes</span></button></li>
+      <li><button type="button" class="tile" data-go="pill:sale" data-tile="Sale"><span class="img" aria-hidden="true"></span><span class="lb">Sale</span></button></li>
+    </ul>
+  </div>
+</section>
+
+<section id="brands" aria-labelledby="brand-title" data-needs-products hidden>
+  <div class="wrap">
+    <h2 id="brand-title">Shop by Brand</h2>
+    <ul class="tiles" id="brand-tiles"></ul>
+  </div>
+</section>
+
+<section id="trending" aria-labelledby="trend-title" hidden>
+  <div class="wrap">
+    <h2 id="trend-title">Trending Now</h2>
+    <ul class="rail scroll" id="rail-trending"></ul>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap cols">
+    <div><div class="brand" style="font-size:20px;min-height:0">THE FOX <span>COLLECTIVE</span></div><p class="mute about">A live e-commerce company based in Chicago. We ship every order from our studio in Jefferson Park.</p></div>
+    <div data-needs-products hidden><h2>Shop</h2>
+      <button type="button" data-go="pill:new">New Arrivals</button>
+      <button type="button" data-go="gender:men">Men</button>
+      <button type="button" data-go="gender:women">Women</button>
+      <button type="button" data-go="gender:kids">Kids</button>
+      <button type="button" data-go="pill:sale">Sale</button>
+    </div>
+    <div><h2>Company</h2><a href="careers.html">Careers</a><a href="https://www.whatnot.com/user/thefoxcollective" rel="noopener">Live on Whatnot</a></div>
+  </div>
+</footer>
+<script src="products.js"></script>
+</body>
+</html>
