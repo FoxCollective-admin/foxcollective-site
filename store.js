@@ -353,8 +353,8 @@
       price,
       el("h2", {}, ["Sizes in stock", el("small", { text: inStock.length + (inStock.length === 1 ? " size" : " sizes") })]),
       sizes,
-      el("div", { class: "buy" }, [el("a", { class: "bt block", href: WHATNOT, rel: "noopener", text: "Shop live on Whatnot" })]),
-      el("p", { class: "note", text: "We sell live on Whatnot as @TheFoxCollective. Sizes move fast during a show, so what you see here can sell out. Every pair is new in the box and ships from Chicago." }),
+      el("div", { class: "buy" }, [el("a", { class: "bt block", href: WHATNOT, rel: "noopener", text: "Shop on Whatnot" })]),
+      el("p", { class: "note", text: "We sell on Whatnot as @TheFoxCollective. Sizes move fast, so what you see here can sell out. Every pair is new in the box and ships from Chicago." }),
       el("dl", {}, [
         el("div", {}, [el("dt", { text: "Style code" }), el("dd", { text: p.sku })]),
         el("div", {}, [el("dt", { text: "Brand" }), el("dd", { text: p.brand })]),
