@@ -1,3 +1,4 @@
 # GitHub Pages reads this file. It keeps the deploy notes off the public site.
 exclude:
   - README_DEPLOY.md
+  - APPS_SCRIPT
