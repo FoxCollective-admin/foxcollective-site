@@ -18,7 +18,7 @@
 <meta property="og:image" content="https://foxcollective.org/img/og-hosts.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="site.css">
-<link rel="stylesheet" href="store.css">
+<link rel="stylesheet" href="store.css?v=20261123b">
 <script src="site.js"></script>
 <script type="application/ld+json">
 {
@@ -88,7 +88,6 @@
         <li><b>All hosts are W-2 employees.</b></li>
         <li><b>Paid training</b> next to a top host before you go live.</li>
         <li><b>Part-time or full-time,</b> chosen from open shifts.</li>
-        <li><b>Referral bonus:</b> $1,000 if we hire someone you refer.</li>
         <li>You need to be 18 or older. Our studio is in Jefferson Park, near the Blue Line and Metra.</li>
         <li>Bonus and commission details are shared in your offer.</li>
       </ul>
@@ -264,6 +263,12 @@
         <h2 id="done-title" tabindex="-1">Application received.</h2>
         <p>Thanks, <span id="done-name"></span>. Your answers and your video are in.</p>
         <div class="next"><b>What happens next</b><br>Our team watches every video. If it's a fit, we reach out by phone or email to set up a video call.</div>
+        <div class="refer">
+          <b>Know someone who'd be great at this?</b>
+          <p>If this one doesn't work out, we're also doing a referral bonus: $1,000 if we hire someone you refer. If you know someone who is outgoing, quick on their feet, funny and loves talking to people, we'd love for them to apply.</p>
+          <button type="button" class="bt" id="share-btn">Share this application</button>
+          <p class="mute small" id="share-note" role="status" hidden></p>
+        </div>
         <p class="seeus">Want to see what we do? <a href="https://www.whatnot.com/user/thefoxcollective" rel="noopener">Watch a show on Whatnot</a>.</p>
       </div>
     </div>
@@ -277,7 +282,6 @@
     <details><summary>Why a video and not a resume?</summary><p>The job is being yourself on camera, so a short video tells us more than a resume can. One take is fine.</p></details>
     <details><summary>Is this a real company?</summary><p>Yes. We are The Fox Collective, based in Chicago. You can watch us live on Whatnot at @TheFoxCollective.</p></details>
     <details><summary>Who can apply?</summary><p>Anyone 18 or older who can get to Jefferson Park.</p></details>
-    <details><summary>Know someone who would be great at this?</summary><p>Send them this page. We pay a $1,000 referral bonus if we hire the person you send.</p></details>
   </div>
 </section>
 </main>
@@ -301,5 +305,21 @@
 </footer>
 <script src="config.js"></script>
 <script src="apply.js"></script>
+<script>
+(function () {
+  var btn = document.getElementById("share-btn"), note = document.getElementById("share-note");
+  if (!btn) return;
+  var url = "https://foxcollective.org/careers.html?src=ref";
+  var text = "The Fox Collective in Chicago is hiring live sales hosts: $25 to $30 an hour plus commission. Apply with a 60-second video.";
+  function say(m) { note.textContent = m; note.hidden = false; }
+  btn.addEventListener("click", function () {
+    if (navigator.share) {
+      navigator.share({ title: "The Fox Collective is hiring", text: text, url: url }).catch(function () {});
+    } else if (navigator.clipboard) {
+      navigator.clipboard.writeText(text + " " + url).then(function () { say("Link copied. Paste it in a text or message."); }, function () { say(url); });
+    } else { say(url); }
+  });
+})();
+</script>
 </body>
 </html>
