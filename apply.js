@@ -227,7 +227,7 @@
     $("a-fail").hidden = true; $("a-submit").hidden = true; $("a-prog").hidden = false;
     progress("Getting ready", 0, 0);
     var meta = { name: file.name, type: file.type || "video/mp4", size: file.size };
-    var started = session ? Promise.resolve(session) : call({ action: "start", fields: d, file: meta, origin: location.origin, page: location.href.split("#")[0].split("?")[0] });
+    var started = session ? Promise.resolve(session) : call({ action: "start", fields: d, file: meta, origin: location.origin, page: location.href.split("#")[0] });
     started.then(function (s) {
       if (!s || !s.ok || !s.uploadUrl) {
         var e = new Error((s && s.error) || "start"); e.user = s && s.error; e.fields = s && s.fields; throw e;

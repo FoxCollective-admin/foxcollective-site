@@ -20,10 +20,25 @@
 <link rel="stylesheet" href="site.css">
 <link rel="stylesheet" href="store.css">
 <script src="site.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "JobPosting",
+  "title": "Live Sales Host",
+  "description": "<p>The Fox Collective is a live e-commerce company in Chicago. Live sales hosts go live to buyers across the country, chat with viewers and sell items one after another on camera, backed by a two-person crew.</p><p>Paid training. Part-time or full-time. Open shifts include mornings, early afternoons, late nights after 11:30 PM (premium pay) and weekends. No sales or camera experience needed. Apply with a short form and a 60-second video.</p>",
+  "datePosted": "2026-11-23",
+  "validThrough": "2026-12-31T23:59",
+  "employmentType": ["PART_TIME", "FULL_TIME"],
+  "hiringOrganization": { "@type": "Organization", "name": "The Fox Collective", "sameAs": "https://foxcollective.org", "logo": "https://foxcollective.org/img/favicon-192.png" },
+  "jobLocation": { "@type": "Place", "address": { "@type": "PostalAddress", "addressLocality": "Chicago", "addressRegion": "IL", "addressCountry": "US" } },
+  "baseSalary": { "@type": "MonetaryAmount", "currency": "USD", "value": { "@type": "QuantitativeValue", "minValue": 25, "maxValue": 30, "unitText": "HOUR" } },
+  "directApply": true
+}
+</script>
 </head>
 <body class="st" data-page="careers">
 <a class="skip" href="#main">Skip to content</a>
-<div class="s-strip">New in the box. Ships from Chicago. <a href="https://www.whatnot.com/user/thefoxcollective" rel="noopener">Shop on Whatnot</a></div>
+<div class="s-strip">New in the box. Ships from Chicago.</div>
 <header class="s-hdr">
   <div class="w row">
     <a class="brand" href="index.html" aria-label="The Fox Collective, home"><img src="img/fox-mark.png" alt="" width="40" height="40">THE FOX <span>COLLECTIVE</span></a>
@@ -32,7 +47,7 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
       <input id="s-q" type="search" name="q" placeholder="Search shoes and brands" autocomplete="off">
     </form>
-    <div class="s-links"><a href="https://www.whatnot.com/user/thefoxcollective" rel="noopener">Shop on Whatnot</a><a href="careers.html">Careers</a></div>
+    <div class="s-links"><a href="careers.html">Careers</a></div>
   </div>
   <nav class="s-nav" aria-label="Shop">
     <a href="shop.html" data-nav="all">All Shoes</a>
@@ -60,6 +75,26 @@
     <div class="video needs-photo">Peyton's video plays here<br>(the same one the ad uses)</div>
   </div>
 </div>
+
+
+<section class="c" aria-label="About the position">
+  <div class="wrap narrow">
+    <details class="about">
+      <summary>About the position</summary>
+      <ul class="dots">
+        <li><b>Role:</b> live sales host.</li>
+        <li><b>Pay:</b> $25 to $30 an hour plus commission. Late nights come with premium pay.</li>
+        <li><b>Sign-on bonus:</b> $1,000.</li>
+        <li><b>All hosts are W-2 employees.</b></li>
+        <li><b>Paid training</b> next to a top host before you go live.</li>
+        <li><b>Part-time or full-time,</b> chosen from open shifts.</li>
+        <li><b>Referral bonus:</b> $1,000 if we hire someone you refer.</li>
+        <li>You need to be 18 or older. Our studio is in Jefferson Park, near the Blue Line and Metra.</li>
+        <li>Bonus and commission details are shared in your offer.</li>
+      </ul>
+    </details>
+  </div>
+</section>
 
 <section aria-label="Pay and perks" class="c">
   <div class="wrap">
@@ -102,7 +137,7 @@
     <ul class="chips">
       <li class="chip">Mornings</li>
       <li class="chip">Early afternoons before 3 PM</li>
-      <li class="chip">Late nights after 11:30 PM</li>
+      <li class="chip urgent">Late nights after 11:30 PM <b>Urgent: premium pay</b></li>
       <li class="chip">Weekends</li>
     </ul>
     <p class="mute" style="margin-top:14px">Our studio is in Jefferson Park on the northwest side of Chicago, near the Blue Line and Metra.</p>
@@ -144,7 +179,7 @@
           <label class="opt"><input type="checkbox" name="availability" value="Mornings"> Mornings</label>
           <label class="opt"><input type="checkbox" name="availability" value="Afternoons"> Afternoons</label>
           <label class="opt"><input type="checkbox" name="availability" value="Evenings"> Evenings</label>
-          <label class="opt"><input type="checkbox" name="availability" value="Late nights"> Late nights</label>
+          <label class="opt urgent"><input type="checkbox" name="availability" value="Late nights"> Late nights (after 11:30 PM) <b class="tag">Urgent: premium pay</b></label>
         </fieldset>
 
         <fieldset class="fld" data-f="commute">
@@ -178,15 +213,24 @@
           </div>
         </div>
 
+        <div class="shift" aria-label="What a shift looks like">
+          <h3>What a shift looks like</h3>
+          <ul class="dots">
+            <li>Go live to buyers across the country and sell on camera. Selling is the job: you move shoes, one after another, and turn viewers into buyers.</li>
+            <li>Keep the chat fun and fast. Talk with viewers, answer comments on the spot, and make every show worth watching.</li>
+            <li>A two-person crew backs you up on every show, so you can focus on entertaining the audience and closing the sale.</li>
+          </ul>
+        </div>
+
         <div class="fld" data-f="video">
           <label for="a-video">Your 60-second video <span class="star">*</span></label>
-          <p class="hint">Record it on your phone. In it, cover these 3 things:</p>
+          <p class="hint">Record 60 seconds on your phone, selfie style, no script. In it:</p>
           <ol class="vlist">
-            <li>What you do for work right now.</li>
-            <li>How your friends would describe you.</li>
-            <li>What role you would play on a reality show.</li>
+            <li>Who you are and where you work now (about 10 seconds).</li>
+            <li>How your friends would describe you (about 15 seconds).</li>
+            <li>If you had your own reality show, what would it be about and what role would you play? Sell it to us (about 35 seconds).</li>
           </ol>
-          <p class="hint">With the rest of the time you can tell us why you fit the role, show us, do both, or neither. It doesn't need to be polished, just genuine.</p>
+          <p class="hint">Talk like you're telling a friend. It doesn't need to be polished. Your personality is what we hire on.</p>
           <label class="drop" id="a-drop" for="a-video">
             <b>Choose your video</b>
             <span>or record one now. MP4 or MOV, up to 300 MB.</span>
@@ -220,6 +264,7 @@
         <h2 id="done-title" tabindex="-1">Application received.</h2>
         <p>Thanks, <span id="done-name"></span>. Your answers and your video are in.</p>
         <div class="next"><b>What happens next</b><br>Our team watches every video. If it's a fit, we reach out by phone or email to set up a video call.</div>
+        <p class="seeus">Want to see what we do? <a href="https://www.whatnot.com/user/thefoxcollective" rel="noopener">Watch a show on Whatnot</a>.</p>
       </div>
     </div>
   </div>
