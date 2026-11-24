@@ -253,11 +253,14 @@ body[data-page=careers] .s-foot { margin-top:0; }
 @media (max-width:860px) { body[data-page=careers] .s-foot { padding-bottom:110px; } }
 
 /* Careers: late-night urgency, shift block, position dropdown, thank-you link */
-.chip.urgent, .opt.urgent { border-color:var(--accent); }
-.chip.urgent b, .opt .tag { display:inline-block; margin-left:6px; background:var(--accent); color:#fff; font-size:12px; font-weight:700; letter-spacing:.02em; padding:2px 8px; border-radius:999px; }
+.chip.urgent, .opt.urgent { border:2px solid var(--accent); background:#fff3ea; font-weight:700; }
+.opt.urgent:has(input:checked) { border-color:var(--accent); box-shadow:none; background:#ffe8d6; }
+.chip.urgent b, .opt .tag { display:inline-block; margin-left:8px; background:var(--accent); color:#fff; font-size:12px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; padding:3px 10px; border-radius:999px; white-space:nowrap; }
 .shift { background:var(--card); border-radius:12px; padding:16px 18px; margin:0 0 20px; }
 .shift h3 { font-size:17px; margin:0 0 8px; }
 details.about { border:1px solid var(--line); border-radius:12px; padding:0 16px; }
 details.about summary { padding:14px 0; font-weight:700; cursor:pointer; }
 details.about ul { padding-bottom:14px; }
 .seeus { margin-top:14px; color:var(--mute); }
+.refer { background:var(--card); border-radius:12px; padding:16px 18px; margin:18px auto 0; max-width:460px; text-align:left; }
+.refer p { margin:6px 0 12px; }
