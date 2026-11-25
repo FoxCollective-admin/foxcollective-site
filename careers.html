@@ -18,7 +18,7 @@
 <meta property="og:image" content="https://foxcollective.org/img/og-hosts.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="site.css">
-<link rel="stylesheet" href="store.css?v=20261123b">
+<link rel="stylesheet" href="store.css?v=20261125a">
 <script src="site.js"></script>
 <script type="application/ld+json">
 {
@@ -66,7 +66,7 @@
       <p class="kicker">Chicago, we're hiring live sales hosts</p>
       <h1>Get paid to sell live on camera.</h1>
       <p class="pay">$25 to $30 an hour + commission</p>
-      <p class="lead">Paid training. $1,000 sign-on bonus. No experience selling on camera needed.</p>
+      <p class="lead">Paid training. $1,000 sign-on bonus (<a class="tlink" href="#bonus-terms" id="terms-open">terms</a>). No experience selling on camera needed.</p>
       <a class="btn wide-m js-apply" href="https://forms.gle/vSBqqxojdruhanJj9">Apply in 5 minutes</a>
       <p class="mute small after">First step is a 60-second video. No resume needed.</p>
     </div>
@@ -84,7 +84,12 @@
       <summary>About the position</summary>
       <ul class="dots">
         <li><b>Pay:</b> $25 to $30 an hour plus commission. Late nights come with premium pay.</li>
-        <li><b>Sign-on bonus:</b> $1,000.</li>
+        <li><b>Sign-on bonus:</b> $1,000.
+          <details class="terms" id="bonus-terms">
+            <summary>Sign-on bonus terms</summary>
+            <p>The $1,000 sign-on bonus is paid through payroll in three parts: $100 after 30 days of employment, $300 after 90 days and $600 after 6 months, counted from your first day. Each part is earned only if you are still employed on that date. If your employment ends before a date for any reason, including if you are terminated, resign or quit, no later part is owed. Parts already paid are yours to keep. Normal tax withholding applies.</p>
+          </details>
+        </li>
         <li><b>Paid training:</b> learn next to a top host before you go live.</li>
         <li><b>Your hours:</b> part-time or full-time, chosen from open shifts.</li>
         <li><b>All hosts are W-2 employees.</b></li>
@@ -200,6 +205,10 @@
         <div class="refer">
           <b>Know someone who'd be great at this?</b>
           <p>If this one doesn't work out, we're also doing a referral bonus: $1,000 if we hire someone you refer. If you know someone who is outgoing, quick on their feet, funny and loves talking to people, we'd love for them to apply.</p>
+          <details class="terms">
+            <summary>Referral bonus terms</summary>
+            <p>The $1,000 referral bonus is paid once, after the person you referred has worked for us for 6 months. If they are terminated, resign or quit before then, no referral bonus is owed.</p>
+          </details>
           <button type="button" class="bt" id="share-btn">Share this application</button>
           <p class="mute small" id="share-note" role="status" hidden></p>
         </div>
@@ -239,6 +248,19 @@
 </footer>
 <script src="config.js"></script>
 <script src="apply.js"></script>
+<script>
+(function () {
+  var link = document.getElementById("terms-open"), t = document.getElementById("bonus-terms");
+  if (!link || !t) return;
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+    var a = t.closest("details.about");
+    if (a) a.open = true;
+    t.open = true;
+    t.scrollIntoView({ behavior: "smooth", block: "center" });
+  });
+})();
+</script>
 <script>
 (function () {
   var btn = document.getElementById("share-btn"), note = document.getElementById("share-note");

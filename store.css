@@ -264,3 +264,9 @@ details.about ul { padding-bottom:14px; }
 .seeus { margin-top:14px; color:var(--mute); }
 .refer { background:var(--card); border-radius:12px; padding:16px 18px; margin:18px auto 0; max-width:460px; text-align:left; }
 .refer p { margin:6px 0 12px; }
+
+/* Small click-open bonus terms (careers) */
+details.terms { border:0; margin-top:6px; }
+details.terms summary { padding:2px 0; font-size:.85rem; font-weight:600; cursor:pointer; text-decoration:underline; color:var(--mute); }
+details.terms p { font-size:.85rem; padding:6px 0 4px; }
+a.tlink { text-decoration:underline; }
