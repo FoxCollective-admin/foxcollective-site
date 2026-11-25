@@ -50,7 +50,8 @@ function setup() {
 }
 
 /** Opening the web app address in a browser shows this, so you can tell it is alive. */
-function doGet() {
+function doGet(e) {
+  if (e && e.parameter && e.parameter.action === 'list') return list_(e.parameter.key);
   return json_({ ok: true, service: 'fox-careers', ready: !!PropertiesService.getScriptProperties().getProperty('SHEET_ID') });
 }
 
@@ -228,4 +229,25 @@ function underDailyLimit_() {
   } finally {
     lock.releaseLock();
   }
+}
+
+
+/** The applications as JSON for the Fox 2 Applicants page. Needs FEED_KEY (Script properties) as ?key=. */
+function list_(key) {
+  var props = PropertiesService.getScriptProperties();
+  var want = props.getProperty('FEED_KEY');
+  if (!want || key !== want) return json_({ ok: false, error: 'not allowed' });
+  var sheet = SpreadsheetApp.openById(props.getProperty('SHEET_ID')).getSheets()[0];
+  var values = sheet.getDataRange().getValues();
+  var rows = [];
+  for (var i = 1; i < values.length; i++) {
+    var r = values[i];
+    if (!r[5] || !r[8]) continue;
+    rows.push({
+      submitted: r[0] instanceof Date ? Utilities.formatDate(r[0], 'America/Chicago', 'yyyy-MM-dd HH:mm') : String(r[0]),
+      referrer: String(r[1]), availability: String(r[2]), commute: String(r[3]), adult: String(r[4]),
+      name: String(r[5]), phone: String(r[6]), email: String(r[7]), video: String(r[8]), size: String(r[9])
+    });
+  }
+  return json_({ ok: true, rows: rows });
 }
